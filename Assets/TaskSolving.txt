@@ -1,0 +1,11 @@
+Task will be solved in 2 steps:
+
+1. Extends Transform with new methods, which will calculate often used logic with position, angle and camera;
+2. Write wrapper to help use new extension more intuitively, and allow calculation in one Update;
+
+Extension methods can be used directly by calling: transform.DistanceToTransform(target), to help developers make additional checks,
+or in component init with one line: TransformsHandler.CheckTransform(transform).IsHaveTargetInRadius(Target, distance).RespondTo(RespondMethod);
+
+Problems with this solution:
+1. Extension methods DistanceToPosition and GetAngleToPosition cannot be wrapped in TransformsHandler due vector structs caching, but they can be used directly from code;
+2. Same in angle checking: in wrapper using only transform.forward vector to check, but custom direction can be setted in direct method calls;
