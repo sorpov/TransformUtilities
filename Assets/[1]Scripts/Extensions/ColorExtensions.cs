@@ -6,7 +6,6 @@ public static class ColorExtensions
 	{
 		percents /= 100;
 		float luma  = 0.3f * color.r + 0.6f * color.g + 0.1f * color.b;
-//		var luma = color.grayscale;
 		
 		var newColor = color;
 		newColor.r += percents * (luma - color.r);

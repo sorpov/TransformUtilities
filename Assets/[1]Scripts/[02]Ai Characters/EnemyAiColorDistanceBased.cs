@@ -7,7 +7,7 @@ public class EnemyAiColorDistanceBased : EnemyAiColor
 	protected override void Start() {
 		base.Start();
 		
-		TransformsHandler.CheckTransform(ThisTransform)
+		TransformsHandlersManager.HandleTransform(ThisTransform)
 			.IsHaveTargetInRadius(Target, ActiveDistance)
 			.RespondTo(SwitchColorActive);
 	} 

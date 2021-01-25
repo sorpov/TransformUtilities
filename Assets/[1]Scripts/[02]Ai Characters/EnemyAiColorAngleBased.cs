@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyAiColorAngleBased : EnemyAiColor 
 {
@@ -14,8 +13,8 @@ public class EnemyAiColorAngleBased : EnemyAiColor
 		RangeDummyStart.localEulerAngles = new Vector3(0, -DetectionAngle, 0);
 		RangeDummyEnd.localEulerAngles = new Vector3(0, DetectionAngle, 0);
 		RangeDummyStart.localScale = RangeDummyEnd.localScale = new Vector3(1,1,DetectionDistance);
-		
-		TransformsHandler.CheckTransform(ThisTransform)
+
+		TransformsHandlersManager.HandleTransform(ThisTransform)
 			.IsHaveTargetInAngle(Target, DetectionAngle)
 			.IsHaveTargetInRadius(Target, DetectionDistance) 
 			.RespondTo(SwitchColorActive);

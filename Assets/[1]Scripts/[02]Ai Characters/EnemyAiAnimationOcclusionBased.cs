@@ -10,7 +10,7 @@ public class EnemyAiAnimationOcclusionBased : EnemyAi
         base.Start();
         _animator = GetComponent<Animator>();
         
-        TransformsHandler.CheckTransform(ThisTransform)
+        TransformsHandlersManager.HandleTransform(ThisTransform)
             .IsInsideCameraBorders(MainCamera, OcclusionOffset)
             .RespondTo(isInside => _animator.enabled = isInside);
     }
