@@ -30,10 +30,10 @@ transform.GetAngleToPosition(Vector3 targetPosition, Vector3 direction)
 transform.IsInsideCameraView(Camera camera, float offset)
 ```
 
-## Inject dependency in TransformsHandler:
+## Inject dependency in TransformsHandlersManager:
 ```
  // Init handling of transform
- TransformsHandler.CheckTransform(transform)
+ TransformsHandlersManager.CheckTransform(transform)
  
  // Add angle handling 
 .IsHaveTargetInAngle(Target, DetectionAngle)
